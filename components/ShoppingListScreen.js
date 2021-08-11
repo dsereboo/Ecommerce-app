@@ -44,7 +44,7 @@ const styles= StyleSheet.create({
         marginHorizontal:20,
     },
     inputContainer:{
-        flex:1,
+        flex:0.5,
         flexDirection:"row",
         backgroundColor:"#fff",
         alignItems:"center",
