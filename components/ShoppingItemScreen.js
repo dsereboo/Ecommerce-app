@@ -9,14 +9,9 @@ import StarRating from "react-native-star-rating";
 export default function ShoppingItemScreen (){
     return (
       <View style={styles.container}>
-        <View style={styles.imageContainer}>
-          <View style={styles.arrow}>
+        <View style={styles.arrow}>
             <AntDesign name="arrowleft" size={24} color="black" />
           </View>
-          <Image
-            style={styles.image}
-            source={require("../assets/jacket1.jpg")}
-          />
           <View style={[styles.cartIcon]}>
             <MaterialCommunityIcons
               name="cart-outline"
@@ -27,13 +22,25 @@ export default function ShoppingItemScreen (){
           <View style={styles.heart}>
             <Entypo name="heart-outlined" size={24} color="#9582f5" />
           </View>
+        <View style={styles.imageContainer}>
+          <View style={styles.imageContainer}>
+            <Image
+              style={styles.image}
+              source={require("../assets/jacket1.jpg")}
+            />
+          </View>
         </View>
         <View style={styles.titleContainer}>
           <Text style={styles.pageTitle}>Red Leather Jacket</Text>
         </View>
         <View style={styles.review}>
           <Text style={styles.reviewText}>Review:</Text>
-          <StarRating rating={3} starSize={15} fullStarColor="#f1c40f" starStyle={{marginRight:5}}/>
+          <StarRating
+            rating={3}
+            starSize={15}
+            fullStarColor="#f1c40f"
+            starStyle={{ marginRight: 5 }}
+          />
         </View>
         <View style={styles.horizontalContainer}>
           <View style={styles.horizontal}></View>
@@ -74,7 +81,7 @@ const styles=StyleSheet.create({
         
     },
     checkout:{
-        flex:0.8,
+        flex:0.7,
         backgroundColor:"#9582f5",
         borderRadius:10,
         flexDirection:"row",
@@ -86,10 +93,10 @@ const styles=StyleSheet.create({
     },
     checkoutPrice:{
         fontWeight:"bold",
-        fontSize:25, 
+        fontSize:22, 
     },
     checkoutTitle:{
-        fontSize:15,
+        fontSize:13,
     },
     whiteText:{
         color:"#fff"
@@ -104,7 +111,7 @@ const styles=StyleSheet.create({
     },
     materials:{
         backgroundColor:"#fff",
-        flex:0.8,
+        flex:0.6,
         justifyContent:"center",
         alignItems:"flex-start",
         marginVertical:20  
@@ -117,30 +124,42 @@ const styles=StyleSheet.create({
        fontWeight:"bold"
     },
     description:{
-        flex:0.8,
+        flex:0.5,
         marginHorizontal:20,
     },
     descriptionText:{
-        fontSize:16,
+        fontSize:14,
        
     },
     image:{
+        flex:1,
         width: 250,
         height: 250,
         borderRadius:20,
-        opacity:0.4
+        // opacity:0.7,
     },
     imageContainer:{
         flex:5,
+        // marginHorizontal:10,
+        marginRight:20,
+        marginLeft:15,
         alignItems:"center",
-        marginTop:60,
+        position:"relative",
+        transform:[{rotateX: "-20deg"}, {rotateY:"-10deg"}] ,
+        backgroundColor:"#fff",
+        borderTopLeftRadius:15,
+        borderTopRightRadius:15,
+        borderBottomRightRadius:30,
+        borderBottomLeftRadius:15,
+        marginBottom:10,
+        marginTop:50,
     },
     titleContainer:{
-        flex:0.8,
+        flex:0.5,
         marginHorizontal:20,
     },
     pageTitle:{
-        fontSize:28,
+        fontSize:26,
         fontWeight:"bold",
     },
     horizontal:{
@@ -155,7 +174,7 @@ const styles=StyleSheet.create({
         justifyContent:"center"
     },
     review:{
-        flex:0.5,
+        flex:0.4,
         flexDirection:"row",
         marginHorizontal:20,
         alignItems:"center"
@@ -166,25 +185,30 @@ const styles=StyleSheet.create({
     },
     arrow:{
         position:"absolute",
-        left:20,
-        backgroundColor:"#fff",
+        top:40,
+        left:14,
+        backgroundColor:"#D8D8D8",
         borderRadius:50,
         padding:15,
+        zIndex:100
     },
     cartIcon:{
-        backgroundColor:"#fff",
+        backgroundColor:"#D8D8D8",
         padding:14,
         borderRadius:50,
         position:"absolute",
-        right:20,
+        right:15,
+        top:40,
+        zIndex:100,
     },
     heart:{
-        backgroundColor:"#fff",
+        backgroundColor:"#D8D8D8",
         padding:14,
         borderRadius:50,
         position:"absolute",
-        right:20,
-        top:70,
+        right:15,
+        top:110,
+        zIndex:20
     }
    
 })

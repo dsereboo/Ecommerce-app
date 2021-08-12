@@ -25,7 +25,7 @@ export default function Sizes (){
 
 const styles= StyleSheet.create({
     container:{
-        flex:1.5,
+        flex:1,
         flexDirection:"row",
         justifyContent:"flex-start",
         marginHorizontal:20,
