@@ -23,6 +23,9 @@ export default function ShoppingListScreen (){
                <Text style={[styles.filter, styles.purple]}>Filter</Text>
            </View>
            <ItemCard/>
+           <ItemCard/>
+           <ItemCard/>
+           <ItemCard/>
         </View>
     )
 }
@@ -33,39 +36,43 @@ const styles= StyleSheet.create({
         backgroundColor:"#F0F0F0",
     },
     topNavigation:{
-        flex:1,
+        flex:0.7,
         flexDirection:"row",
         justifyContent:"space-between",
+        marginTop:10,
         alignItems:"center",
         marginHorizontal:20,
     },
     titleContainer:{
-        flex:1,
+        flex:0.3,
         marginHorizontal:20,
     },
     inputContainer:{
-        flex:0.5,
+        flex:0.4,
         flexDirection:"row",
         backgroundColor:"#fff",
         alignItems:"center",
         justifyContent:"space-between",
-        borderRadius:30,
+        paddingLeft:12,
+        paddingRight:12,
+        borderRadius:15,
         marginHorizontal:20,
+        marginBottom:15,
     },
     arrow:{
         backgroundColor:"#fff",
         borderRadius:50,
-        padding:18,
+        padding:12,
     },
     cart:{
-        padding:14,
+        padding:10,
     },
     itemTitle:{
         fontSize:26,
         fontWeight:"bold",
     },
     filter:{
-        fontSize:16,
+        fontSize:14,
         fontWeight:"bold"
     },
     purple:{
